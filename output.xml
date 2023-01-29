@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230124 21:51:19.561" rpa="false" schemaversion="3">
+<suite id="s1" name="Executando Testes" source="C:\repositories\git_hub_repositories\eu_qa_robot_framework\src\1_general_section\executando_testes.robot">
+<test id="s1-t1" name="Teste 1" line="34">
+<kw name="Set Variable" library="BuiltIn">
+<var>${X}</var>
+<arg>3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230124 21:51:19.607" level="INFO">${X} = 3</msg>
+<status status="PASS" starttime="20230124 21:51:19.607" endtime="20230124 21:51:19.607"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Y}</var>
+<arg>3</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230124 21:51:19.609" level="INFO">${Y} = 3</msg>
+<status status="PASS" starttime="20230124 21:51:19.608" endtime="20230124 21:51:19.610"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${X}</arg>
+<arg>${Y}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230124 21:51:19.611" endtime="20230124 21:51:19.612"/>
+</kw>
+<tag>performance</tag>
+<tag>regression</tag>
+<status status="PASS" starttime="20230124 21:51:19.606" endtime="20230124 21:51:19.612"/>
+</test>
+<test id="s1-t2" name="Teste 2" line="41">
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>oi</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20230124 21:51:19.617" level="INFO">Length is 2</msg>
+<status status="PASS" starttime="20230124 21:51:19.616" endtime="20230124 21:51:19.617"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230124 21:51:19.619" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230124 21:51:19.617" endtime="20230124 21:51:19.619"/>
+</kw>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230124 21:51:19.615" endtime="20230124 21:51:19.619"/>
+</test>
+<test id="s1-t3" name="Teste 3" line="46">
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>oi</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20230124 21:51:19.622" level="INFO">Length is 2</msg>
+<status status="PASS" starttime="20230124 21:51:19.622" endtime="20230124 21:51:19.623"/>
+</kw>
+<kw name="Should Be Empty" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Verifies that the given item is empty.</doc>
+<msg timestamp="20230124 21:51:19.625" level="INFO">Length is 0</msg>
+<status status="PASS" starttime="20230124 21:51:19.623" endtime="20230124 21:51:19.628"/>
+</kw>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="PASS" starttime="20230124 21:51:19.620" endtime="20230124 21:51:19.629"/>
+</test>
+<test id="s1-t4" name="Teste 4" line="51">
+<kw name="Log" library="BuiltIn">
+<arg>\n</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230124 21:51:19.632" level="INFO">
+</msg>
+<status status="PASS" starttime="20230124 21:51:19.632" endtime="20230124 21:51:19.633"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${X}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230124 21:51:19.634" endtime="20230124 21:51:19.634"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Y}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230124 21:51:19.635" endtime="20230124 21:51:19.635"/>
+</kw>
+<if>
+<branch type="IF" condition="${X} == ${Y}">
+<kw name="Evaluate" library="BuiltIn">
+<arg>${X} + ${Y}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230124 21:51:19.636" endtime="20230124 21:51:19.636"/>
+</kw>
+<msg timestamp="20230124 21:51:19.636" level="FAIL">Evaluating IF condition failed: Evaluating expression ' == ' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</msg>
+<status status="FAIL" starttime="20230124 21:51:19.636" endtime="20230124 21:51:19.636"/>
+</branch>
+<branch type="ELSE IF" condition="${X} &gt; ${Y}">
+<kw name="Evaluate" library="BuiltIn">
+<arg>${X} * ${Y}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230124 21:51:19.636" endtime="20230124 21:51:19.636"/>
+</kw>
+<status status="NOT RUN" starttime="20230124 21:51:19.636" endtime="20230124 21:51:19.636"/>
+</branch>
+<branch type="ELSE">
+<kw name="Evaluate" library="BuiltIn">
+<arg>${X} - ${Y}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20230124 21:51:19.637" endtime="20230124 21:51:19.637"/>
+</kw>
+<status status="NOT RUN" starttime="20230124 21:51:19.636" endtime="20230124 21:51:19.637"/>
+</branch>
+<status status="FAIL" starttime="20230124 21:51:19.635" endtime="20230124 21:51:19.637"/>
+</if>
+<status status="FAIL" starttime="20230124 21:51:19.631" endtime="20230124 21:51:19.637">Evaluating IF condition failed: Evaluating expression ' == ' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
+</test>
+<status status="FAIL" starttime="20230124 21:51:19.565" endtime="20230124 21:51:19.638"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">performance</stat>
+<stat pass="3" fail="0" skip="0">regression</stat>
+<stat pass="2" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Executando Testes">Executando Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
