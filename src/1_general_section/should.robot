@@ -30,7 +30,7 @@ Teste 1 - Teste Should
     
     # ${D}  Convert To Integer  ${D}
 
-    Should Be Equal As Strings  ${D}  4
+    Should Be Equal As Strings  ${D}  42
     
     # # booleano
     Should Be True  ${F}
