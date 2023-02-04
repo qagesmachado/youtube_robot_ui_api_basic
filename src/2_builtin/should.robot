@@ -28,16 +28,18 @@ Teste 1 - Teste Should
     # # Validação de tipo
     Should Be Equal As Integers  ${D}  ${D}
     
-    # ${D}  Convert To Integer  ${D}
+    ${D}  Convert To Integer  ${D}
 
-    Should Be Equal As Strings  ${D}  42
+    Should Be Equal As Strings  ${D}  4
     
     # # booleano
     Should Be True  ${F}
+    Should Be True  ${B}
+    # Should Be True  ${G}
 
     # # Regex
     Should Contain   ${H}  Gustavo
-    Should Start With  ${K}  ustavo
+    Should Start With  ${K}  G
 
     
 
