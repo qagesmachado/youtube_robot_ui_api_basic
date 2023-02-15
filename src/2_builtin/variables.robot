@@ -63,5 +63,7 @@ key-word 3
     Log To Console  ${Y}
 
 key-word 4
+    ${X}  Set Variable    3
+    ${Y}  Set Variable    3
     Log To Console  ${X}
     Log To Console  ${Y}
