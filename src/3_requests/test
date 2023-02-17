@@ -1,0 +1,11 @@
+        
+#     # Get body
+#   ${body}  Get File    path=${EXECDIR}${file}
+#   ${body}  Convert To String    item=${body}
+
+
+#     Library  RequestsLibrary
+#     Library  OperatingSystem
+#     Library  String
+#     Library  JSONLibrary
+#     Resource  autenticacao_resource.robot
