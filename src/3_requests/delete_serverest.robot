@@ -7,12 +7,10 @@ Library               RequestsLibrary
 
 # http://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html
 
-# robot -d ./results -L trace  .\src\3_requests\put_serverest.robot
+# robot -d ./results -L trace  .\src\3_requests\delete_serverest.robot
 
 
 *** Test Cases ***
-
-
 Realizando POST
     Create Session    url=https://serverest.dev    alias=server_rest
     
